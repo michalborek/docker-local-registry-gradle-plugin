@@ -1,9 +1,15 @@
 package pl.greenpath.gradle.dockerlocalregistry
 
+import org.gradle.api.Project
+
+
 class DockerLocalRegistryExtension {
 
   private int publishPort = 5000
   private String registryName = 'registry'
+
+  DockerLocalRegistryExtension(Project project) {
+  }
 
   void name(String registryName) {
     this.registryName = registryName
